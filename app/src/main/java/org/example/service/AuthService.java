@@ -1,5 +1,5 @@
 package org.example.service;
 
-public class ProgramManager {
+public class AuthService {
     
 }
