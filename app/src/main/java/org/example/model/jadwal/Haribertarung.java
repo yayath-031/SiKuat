@@ -1,4 +1,4 @@
-package org.example.model.task;
+package org.example.model.jadwal;
 
 public class Haribertarung {
     
