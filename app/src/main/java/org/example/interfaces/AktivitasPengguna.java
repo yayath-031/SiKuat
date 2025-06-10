@@ -1,5 +1,9 @@
 package org.example.interfaces;
 
-public class AktivitasPengguna {
-    
-}
+public interface AktivitasPengguna {
+    void registrasi();
+
+    void login();
+
+    void keluarAplikasi();
+} 

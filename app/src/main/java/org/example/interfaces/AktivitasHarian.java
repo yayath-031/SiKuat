@@ -1,5 +1,6 @@
 package org.example.interfaces;
 
-public class AktivitasHarian {
+public interface AktivitasHarian {
+    void lakukanAktivitas(Pengguna pengguna);
     
-}
+} 
