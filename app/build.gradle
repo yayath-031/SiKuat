@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0' // Memperbarui versi plugin JavaFX ke versi yang lebih baru
 }
 
 repositories {
@@ -16,11 +17,15 @@ repositories {
 }
 
 dependencies {
-    // Use JUnit test framework.
-    testImplementation libs.junit
+    // Use JUnit Jupiter for testing.
+    testImplementation libs.junit.jupiter
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     // This dependency is used by the application.
     implementation libs.guava
+
+    implementation 'com.google.code.gson:gson:2.10.1' // Gunakan versi terbaru yang stabil
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -32,5 +37,12 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'org.example.App'
+        // Untuk JavaFX, Anda perlu mengubah ini ke kelas Application JavaFX Anda
+        // Contoh: mainClass = 'com.namaPackageAnda.AplikasiJavaFXAnda'
+    mainClass = 'Main' // Mengubah mainClass karena Main.java ada di default package
 }
+    
+    javafx {
+        version = "24.0.1" // Menentukan versi JavaFX
+        modules = [ 'javafx.controls', 'javafx.fxml' ] // Menentukan modul JavaFX yang dibutuhkan (tambahkan jika perlu)
+    }

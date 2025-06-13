@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- 
+    LoginView.fxml
+    Dibuat berdasarkan desain "Login Page.jpg".
+    File ini mendefinisikan tampilan untuk halaman login.
+-->
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="450.0" stylesheets="@/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LoginController">
+   <children>
+      <!-- Gambar Latar Belakang -->
+      <ImageView fitHeight="700.0" fitWidth="450.0" pickOnBounds="true">
+         <image>
+            <Image url="@/Final Proyek (3).jpg" />
+         </image>
+      </ImageView>
+      
+      <!-- Panel Merah Utama -->
+      <VBox alignment="TOP_CENTER" maxHeight="600.0" maxWidth="380.0" prefHeight="600.0" prefWidth="380.0" spacing="15.0" styleClass="panel-merah">
+         <children>
+            <!-- Teks Welcome -->
+            <Label styleClass="welcome-text" text="WELCOME" />
+            <Label styleClass="welcome-text" text="TO SI KUAT!">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            
+            <!-- Ikon Dumbbell -->
+            <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/dumbbell_11587602.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </ImageView>
+            
+            <!-- Input Username -->
+            <HBox alignment="CENTER_LEFT" maxWidth="280.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <!-- GANTI DENGAN FILE IKON USER KAMU -->
+                        <Image url="@/user-icon.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="usernameField" promptText="USERNAME" styleClass="text-field-underline" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            
+            <!-- Input Password -->
+            <HBox alignment="CENTER_LEFT" maxWidth="280.0" spacing="10.0">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <!-- GANTI DENGAN FILE IKON KUNCI/LOCK KAMU -->
+                        <Image url="@/lock-icon.png" />
+                     </image>
+                  </ImageView>
+                  <PasswordField fx:id="passwordField" promptText="PASSWORD" styleClass="text-field-underline" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            
+            <!-- Link Lupa Password -->
+            <Hyperlink onAction="#handleForgotPassword" styleClass="form-link" text="Forgot your password?">
+               <VBox.margin>
+                  <Insets left="130.0" top="-5.0" />
+               </VBox.margin>
+            </Hyperlink>
+            
+            <!-- Tombol Login -->
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="35.0" prefWidth="280.0" styleClass="primary-button" text="LOGIN">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            
+            <!-- Link ke Halaman Registrasi -->
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Label styleClass="secondary-text" text="Don't have an account?" />
+                  <Hyperlink onAction="#handleRegistrasiButtonAction" styleClass="form-link" text="REGISTER" />
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>

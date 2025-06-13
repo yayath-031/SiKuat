@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<!-- 
+    ProfileView.fxml
+    Dibuat berdasarkan desain "Profile Page.jpg".
+    Menampilkan detail profil, level, EXP, dan badge pengguna.
+-->
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfileController">
+   <children>
+      <!-- Gambar Latar Belakang -->
+      <ImageView fitHeight="700.0" fitWidth="1000.0" pickOnBounds="true">
+         <image>
+            <Image url="@/Final Projek (3).jpg" />
+         </image>
+      </ImageView>
+      
+      <!-- Konten Utama -->
+      <AnchorPane>
+         <children>
+            <!-- Header Logo di Kiri Atas -->
+            <HBox alignment="CENTER_LEFT" layoutX="40.0" layoutY="30.0" spacing="10.0">
+               <children>
+                  <Label styleClass="header-text" text="SI KUAT!" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/dumbbell_11587602.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+
+            <!-- Tombol Kembali ke Menu -->
+            <Button fx:id="backButton" layoutX="920.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButton" styleClass="back-button" text="&lt; Back" />
+            
+            <!-- Panel Profil di Tengah -->
+            <VBox fx:id="profilePanel" alignment="TOP_CENTER" layoutX="100.0" layoutY="100.0" maxHeight="500.0" maxWidth="800.0" prefHeight="500.0" prefWidth="800.0" spacing="15.0" styleClass="profile-panel">
+               <children>
+                  <!-- Bar Level & EXP -->
+                  <AnchorPane prefHeight="60.0" prefWidth="760.0">
+                     <children>
+                        <!-- Info Level -->
+                        <HBox alignment="CENTER_LEFT" spacing="8.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="15.0">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <!-- GANTI DENGAN IKON BINTANG JIKA ADA -->
+                                    <Image url="@/star-icon.png" /> 
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="levelLabel" styleClass="profile-level-text" text="LVL.1" />
+                           </children>
+                        </HBox>
+                        <!-- Info EXP -->
+                        <VBox alignment="CENTER_RIGHT" spacing="5.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <Label styleClass="profile-exp-text" text="EXP" />
+                              <ProgressBar fx:id="expBar" prefHeight="20.0" prefWidth="250.0" progress="0.5" styleClass="profile-exp-bar" />
+                              <Label fx:id="expTextLabel" styleClass="profile-exp-text" text="100/200" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  
+                  <!-- Foto Profil (Lingkaran) -->
+                  <StackPane>
+                     <children>
+                        <ImageView fx:id="profileImageView" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <!-- GANTI DENGAN GAMBAR PROFIL PENGGUNA -->
+                              <Image url="@/man (2).png" />
+                           </image>
+                           <clip>
+                              <!-- Klip ini membuat gambar menjadi lingkaran -->
+                              <Circle radius="75.0" />
+                           </clip>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </StackPane>
+
+                  <!-- Nama Pengguna -->
+                  <Label fx:id="usernameLabel" styleClass="profile-username-text" text="Yayat" />
+                  
+                  <!-- Koleksi Badge -->
+                  <HBox alignment="CENTER" spacing="40.0">
+                     <children>
+                        <!-- Ganti dengan gambar badge yang sesuai -->
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" styleClass="badge-image">
+                           <image><Image url="@/badge-side.png" /></image>
+                        </ImageView>
+                        <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" styleClass="badge-image">
+                           <image><Image url="@/badge-main.png" /></image>
+                        </ImageView>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" styleClass="badge-image">
+                           <image><Image url="@/badge-side-2.png" /></image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

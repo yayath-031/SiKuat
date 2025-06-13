@@ -1,0 +1,275 @@
+/* * style.css
+ * File ini berisi semua styling untuk aplikasi SiKuat.
+*/
+
+/* --- Gaya Umum --- */
+.header-text {
+    -fx-fill: white;
+    -fx-font-family: "Impact", "Arial Black", sans-serif;
+    -fx-font-size: 32px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0, 0, 2);
+}
+
+.menu-panel {
+    -fx-background-color: #8B0000;
+    -fx-background-radius: 20;
+    -fx-border-color: #A52A2A;
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 15, 0.6, 0, 0);
+}
+
+.page-title-text {
+    -fx-fill: white;
+    -fx-font-family: "Verdana", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 22px;
+    -fx-border-color: transparent transparent white transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-padding: 0 0 5 0;
+}
+
+.kembali-button {
+    -fx-background-color: #F5F5DC;
+    -fx-text-fill: #3e3e3e;
+    -fx-font-family: "Verdana", sans-serif;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15;
+    -fx-padding: 10 20 10 20;
+}
+.kembali-button:hover {
+    -fx-background-color: white;
+}
+
+.home-button {
+    -fx-background-color: #F5F5DC;
+    -fx-background-radius: 15;
+    -fx-padding: 5;
+}
+.home-button:hover {
+    -fx-background-color: white;
+}
+
+
+/* --- Gaya Loading --- */
+.welcome-text {
+    -fx-fill: white;
+    -fx-font-family: "Arial Black", "Impact", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+}
+
+/* --- Gaya Login / Registrasi --- */
+.text-field-underline {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent white transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #cccccc;
+}
+
+.primary-button {
+    -fx-background-color: #2c2c2c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20;
+}
+.primary-button:hover { -fx-background-color: #4d4d4d; }
+
+.form-link { -fx-text-fill: #cccccc; -fx-underline: false; }
+.form-link:hover { -fx-text-fill: white; -fx-underline: true; }
+.secondary-text { -fx-fill: #cccccc; -fx-font-size: 12px; }
+
+
+/* --- Gaya Menu Utama --- */
+.close-button {
+    -fx-background-color: #2c2c2c;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5;
+}
+.close-button:hover { -fx-background-color: #e60000; }
+
+.menu-title-text {
+    -fx-fill: white;
+    -fx-font-family: "Verdana", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 28px;
+}
+
+.menu-subtitle-text {
+    -fx-fill: #e0e0e0;
+    -fx-font-family: "Verdana", sans-serif;
+    -fx-font-size: 18px;
+}
+
+.menu-button-dark {
+    -fx-background-color: #2c2c2c;
+    -fx-text-fill: white;
+    -fx-font-family: "Verdana", sans-serif;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25;
+    -fx-pref-height: 50px;
+}
+.menu-button-dark:hover { -fx-background-color: #4d4d4d; }
+
+.menu-button-light {
+    -fx-background-color: #F5F5DC;
+    -fx-text-fill: #3e3e3e;
+    -fx-font-family: "Verdana", sans-serif;
+    -fx-font-weight: bold;
+    -fx-background-radius: 25;
+    -fx-pref-height: 50px;
+}
+.menu-button-light:hover { -fx-background-color: #ffffff; }
+
+/* --- Gaya Profil --- */
+.profile-panel {
+    -fx-background-color: #8B0000;
+    -fx-background-radius: 20;
+}
+.profile-username-text {
+    -fx-fill: white;
+    -fx-font-family: "Verdana", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 26px;
+}
+.profile-level-text {
+    -fx-fill: #FFD700;
+    -fx-font-family: "Arial Black", sans-serif;
+    -fx-font-size: 20px;
+}
+.profile-exp-text {
+    -fx-fill: #e0e0e0;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.profile-exp-bar .bar {
+    -fx-background-color: white;
+    -fx-background-insets: 1;
+    -fx-padding: 0.35em;
+    -fx-background-radius: 10;
+}
+.profile-exp-bar .track {
+    -fx-background-color: #610000;
+    -fx-background-radius: 10;
+}
+.badge-image { -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 10, 0.7, 0, 2); }
+.back-button { -fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold; }
+.back-button:hover { -fx-text-fill: #FFD700; }
+
+/* --- Gaya Buat Program --- */
+.program-card-light {
+    -fx-background-color: #F5F5DC;
+    -fx-background-radius: 15;
+    -fx-padding: 15;
+    -fx-cursor: hand;
+}
+.program-card-light:hover { -fx-background-color: white; }
+
+.program-card-dark {
+    -fx-background-color: #2c2c2c;
+    -fx-background-radius: 15;
+    -fx-padding: 15;
+    -fx-cursor: hand;
+}
+.program-card-dark:hover { -fx-background-color: #4d4d4d; }
+
+.program-card-text {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.popup-panel {
+    -fx-background-color: #8B0000;
+    -fx-background-radius: 15;
+    -fx-border-color: #A52A2A;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+}
+
+.popup-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-border-color: transparent transparent white transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-min-width: 200;
+}
+.popup-button:hover {
+    -fx-border-color: transparent transparent #FFD700 transparent;
+}
+
+
+/* --- Gaya Jadwal Program / Peta Progres --- */
+.day-node-unlocked { -fx-cursor: hand; }
+.day-node-locked { -fx-opacity: 0.5; }
+
+.day-node-label {
+    -fx-background-color: #2c2c2c;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 3 8 3 8;
+    -fx-background-radius: 10;
+}
+
+.day-node-label-locked {
+    -fx-background-color: #4d4d4d;
+    -fx-text-fill: #aaaaaa;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 3 8 3 8;
+    -fx-background-radius: 10;
+}
+
+/* --- Gaya Hari Bertarung (Daftar Latihan) --- */
+.latihan-card-light {
+    -fx-background-color: #F5F5DC;
+    -fx-background-radius: 15;
+    -fx-padding: 15;
+}
+.latihan-card-dark {
+    -fx-background-color: #2c2c2c;
+    -fx-background-radius: 15;
+    -fx-padding: 15;
+}
+
+.latihan-title { -fx-font-weight: bold; -fx-font-size: 16px; }
+.latihan-subtitle { -fx-font-size: 12px; }
+
+.difficulty-label {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 5 10 5 10;
+    -fx-background-radius: 15;
+}
+.difficulty-easy { -fx-background-color: #90EE90; -fx-text-fill: #2e6b2e; }
+.difficulty-medium { -fx-background-color: #87CEEB; -fx-text-fill: #2c5d75; }
+.difficulty-hard { -fx-background-color: #FFA07A; -fx-text-fill: #a52a2a; }
+
+.checkbox-selesai .box {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+}
+.checkbox-selesai:selected .mark { -fx-background-color: green; }
+
+/* --- Gaya Hari Istirahat (Kuis) --- */
+.quiz-question-text {
+    -fx-fill: white;
+    -fx-font-family: "Verdana", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 22px;
+}
+
+/* --- Gaya Riwayat --- */
+.riwayat-card-light { -fx-background-color: #F5F5DC; -fx-background-radius: 15; -fx-padding: 15; }
+.riwayat-card-dark { -fx-background-color: #2c2c2c; -fx-background-radius: 15; -fx-padding: 15; }
+.riwayat-program-title { -fx-font-weight: bold; -fx-font-size: 16px; -fx-border-color: transparent transparent #8B0000 transparent; -fx-padding: 0 0 5 0; }
+.riwayat-text { -fx-fill: #3e3e3e; }
+.riwayat-text-dark { -fx-fill: white; }

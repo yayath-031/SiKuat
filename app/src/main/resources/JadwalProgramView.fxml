@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<!--
+    JadwalProgramView.fxml
+    Dibuat berdasarkan desain "Task Page.png".
+    Menampilkan peta progres mingguan (7 hari).
+-->
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.JadwalProgramController">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1000.0" pickOnBounds="true">
+         <image><Image url="@/Final Projek (3).jpg" /></image>
+      </ImageView>
+      
+      <AnchorPane>
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="40.0" layoutY="30.0" spacing="10.0">
+               <children>
+                  <Label styleClass="header-text" text="SI KUAT!" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image><Image url="@/dumbbell_11587602.png" /></image>
+                  </ImageView>
+               </children>
+            </HBox>
+
+            <VBox layoutX="100.0" layoutY="100.0" maxHeight="500.0" maxWidth="800.0" prefHeight="500.0" prefWidth="800.0" spacing="20.0" styleClass="menu-panel">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="50.0" spacing="10.0">
+                     <children>
+                        <Label fx:id="namaProgramLabel" styleClass="page-title-text" text="PROGRAM OTOT KHUSUS (DADA)" />
+                        <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                           <children>
+                              <ProgressBar fx:id="expBar" prefHeight="20.0" prefWidth="200.0" progress="0.5" styleClass="profile-exp-bar" />
+                              <Label fx:id="expTextLabel" styleClass="profile-exp-text" text="100/200">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <!-- Peta Progres -->
+                  <AnchorPane fx:id="mapPane" VBox.vgrow="ALWAYS">
+                     <!-- Garis penghubung akan digambar di sini dari controller/CSS -->
+                     <!-- Node-node hari -->
+                     <!-- Contoh Node 1 (Hari Bertarung) -->
+                     <VBox alignment="CENTER" layoutX="92.0" layoutY="100.0" onMouseClicked="#handleDayNodeClicked" spacing="5.0" styleClass="day-node-unlocked">
+                        <children>
+                           <Label styleClass="day-node-label" text="BERTARUNG!" />
+                           <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                               <image><Image url="@/bertarung-icon.png" /></image>
+                           </ImageView>
+                        </children>
+                     </VBox>
+                      <!-- Contoh Node 2 (Hari Istirahat) -->
+                     <VBox alignment="CENTER" layoutX="355.0" layoutY="35.0" onMouseClicked="#handleDayNodeClicked" spacing="5.0" styleClass="day-node-unlocked">
+                         <children>
+                             <Label styleClass="day-node-label" text="ISTIRAHAT" />
+                             <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image><Image url="@/istirahat-icon.png" /></image>
+                             </ImageView>
+                         </children>
+                     </VBox>
+                      <!-- Contoh Node 3 (Terkunci) -->
+                      <VBox alignment="CENTER" layoutX="185.0" layoutY="220.0" onMouseClicked="#handleDayNodeClicked" spacing="5.0" styleClass="day-node-locked">
+                          <children>
+                              <Label styleClass="day-node-label-locked" text="BERTARUNG!" />
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                  <image><Image url="@/lock-icon.png" /></image>
+                              </ImageView>
+                          </children>
+                      </VBox>
+                      <!-- Node lain akan ditambahkan secara dinamis oleh controller -->
+                  </AnchorPane>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Button fx:id="kembaliButton" mnemonicParsing="false" onAction="#handleKembaliButton" styleClass="kembali-button" text="KEMBALI" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="40.0" right="40.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

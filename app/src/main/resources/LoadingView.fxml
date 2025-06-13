@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<!-- 
+    LoadingView.fxml (Updated)
+    Versi ini sudah terhubung dengan file style.css.
+    Inline styles (style="...") telah diganti dengan styleClass untuk pemeliharaan yang lebih baik.
+-->
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" stylesheets="@/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LoadingController">
+   <children>
+      <!-- 1. Gambar Latar Belakang -->
+      <ImageView fitHeight="600.0" fitWidth="400.0" pickOnBounds="true">
+         <image>
+            <Image url="@/Final Projek (3).jpg" />
+         </image>
+      </ImageView>
+      
+      <!-- 2. Panel Tengah (Merah) -->
+      <!-- Menggunakan styleClass "panel-merah" dari style.css -->
+      <VBox alignment="CENTER" maxHeight="350.0" maxWidth="300.0" prefHeight="350.0" prefWidth="300.0" spacing="20.0" styleClass="panel-merah">
+         <children>
+            <!-- 3. Kontainer untuk Ikon (Lingkaran Putih) -->
+            <StackPane>
+               <children>
+                  <Circle fill="WHITE" radius="70.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/dumbbell_11587602.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </StackPane>
+            
+            <!-- 4. Teks Sambutan -->
+            <!-- Menggunakan styleClass "welcome-text" dari style.css -->
+            <Label styleClass="welcome-text" text="WELCOME" />
+            <Label styleClass="welcome-text" text="TO SI KUAT!" />
+            
+            <!-- 5. Progress Bar (Otomatis mendapat style dari CSS) -->
+            <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </ProgressBar>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
